@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feastale — Palaharappetti</title>
+  <meta name="description" content="Feastale launches Palaharappetti — a Kerala-inspired snack box. Order now for authentic flavours, crafted with love." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Nunito, sans-serif;}
+    .ml-font{font-family:"Noto Sans Malayalam", sans-serif;}
+    .btn-primary{background:#0f4f42;color:white;border-radius:1rem;padding:.9rem 1.2rem;font-weight:800}
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <img src="Group 2.png" alt="Feastale Logo" class="h-8"/>
+    <nav class="space-x-4">
+      <a href="#product">Palaharappetti</a>
+      <a href="#story">Our Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#order">Order</a>
+    </nav>
+  </header>
+
+  <section class="text-center py-16 bg-cover bg-center" style="background-image:url('Color\ Fill\ 1.png')">
+    <img src="Group 5.png" alt="Palaharappetti Wordmark" class="mx-auto h-16 md:h-24"/>
+    <h1 class="text-4xl font-extrabold mt-4">Kerala on your table</h1>
+    <p class="mt-2">Introducing <strong>Palaharappetti</strong> — Feastale’s first-ever snack experience.</p>
+    <a href="#order" class="btn-primary inline-block mt-6">Order Now</a>
+  </section>
+
+  <section id="product" class="py-16 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6">Meet Palaharappetti</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <p>Palaharappetti is Kerala’s authentic snack gift pack, crafted with love and tradition, making it the perfect choice for corporate gifting. Each pack brings together the irresistible taste of Banana Chips, Sharkaravaratti, and Baby Murukku—beautifully packed and customizable with your company logo and greeting card. Whether it’s for festivals, employee appreciation, client relationships, or corporate events, Palaharappetti adds a touch of Kerala’s warmth and flavor to every occasion.</p>
+      <img src="render.png" alt="Palaharappetti Box" class="rounded shadow"/>
+    </div>
+  </section>
+
+  <section id="story" class="bg-emerald-50 py-16 px-4">
+    <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+    <p>Feastale originated in the minds of three young entrepreneurs under LEAD Business Incubator. <em>Palaharappetti</em> is our first step — a playful love letter to Kerala.</p>
+  </section>
+
+  <section id="gallery" class="py-16 px-4">
+    <h2 class="text-3xl font-bold mb-6">Our Product</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-1 gap-4">
+      <img src="0001.jpg" class="rounded shadow"/>
+    </div>
+  </section>
+
+  <section id="order" class="bg-emerald-100 py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Order Now</h2>
+    <p>Pre-orders open! Send us your details and we’ll contact you on WhatsApp.</p>
+    <form onsubmit="event.preventDefault(); handleOrder();" class="mt-6 max-w-md mx-auto space-y-3">
+      <input id="name" placeholder="Your name" class="w-full border p-2 rounded"/>
+      <input id="phone" placeholder="Phone / WhatsApp" class="w-full border p-2 rounded"/>
+      <input id="city" placeholder="City" class="w-full border p-2 rounded"/>
+      <button type="submit" class="btn-primary w-full">Send Order Enquiry</button>
+    </form>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center p-6">
+    <p>Feastale © 2025 • Made in Kerala</p>
+    <p>WhatsApp: +91 85909 80096 • Instagram: @feastale</p>
+  </footer>
+
+  <script>
+    function handleOrder(){
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const city=document.getElementById('city').value.trim();
+      const msg=encodeURIComponent(`Hello Feastale, I want to pre-order Palaharappetti.\nName: ${name}\nPhone: ${phone}\nCity: ${city}`);
+      window.location.href=`https://wa.me/918590980096?text=${msg}`;
+    }
+  </script>
+
+</body>
+</html>
